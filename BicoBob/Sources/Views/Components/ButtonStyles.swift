@@ -38,11 +38,11 @@ struct FullWidthButtonStyle: ButtonStyle {
 struct SaveButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.system(size: 12, weight: .semibold))
-            .foregroundStyle(.black)
+            .font(.system(size: 12))
+            .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 8)
-            .background(configuration.isPressed ? Color.cyan.opacity(0.8) : Color.cyan)
+            .background(configuration.isPressed ? Color.white.opacity(0.15) : Color.white.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }
