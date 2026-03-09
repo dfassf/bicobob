@@ -1,0 +1,38 @@
+name: BicoBob
+options:
+  bundleIdPrefix: com.biocom
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "16.0"
+
+targets:
+  BicoBob:
+    type: application
+    platform: macOS
+    sources:
+      - BicoBob/Sources
+    resources:
+      - BicoBob/Resources
+    info:
+      path: BicoBob/Info.plist
+      properties:
+        CFBundleDisplayName: 비코밥
+        CFBundleName: BicoBob
+        CFBundleShortVersionString: "1.0.0"
+        CFBundleVersion: "1"
+        LSUIElement: true
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+    entitlements:
+      path: BicoBob/BicoBob.entitlements
+    settings:
+      base:
+        PRODUCT_NAME: BicoBob
+        SWIFT_VERSION: "5.10"
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_ALLOWED: "YES"
+        ENABLE_DEBUG_DYLIB: "NO"
+        ENABLE_PREVIEWS: "NO"
+        PRODUCT_BUNDLE_IDENTIFIER: com.biocom.bicobob

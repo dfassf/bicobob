@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0927BC5CBBAAB0B4823BABAE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEFF2CFE6FEF8988F92886C /* Models.swift */; };
+		3E641D947357BDC47D65A84C /* SettingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EE84DCE942812AAE41424 /* SettingsService.swift */; };
+		4710274A13BC0EDBCA3FCA8A /* StatusBarPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B563FEF331BFE74A2F330E30 /* StatusBarPanel.swift */; };
+		4740F32C86B25F426CB279F0 /* PopoverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5753125739AD48C7B83A2C /* PopoverContentView.swift */; };
+		5128EA474FE47D225719C6E9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEDC58B587A94A656211CDB /* SettingsView.swift */; };
+		5D710CFF59DDA2D915EDAFD2 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA3A6EBD013CEED57494863 /* ButtonStyles.swift */; };
+		5D81FC21CA81FD490F33B301 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA2F63607301E0BF169FEAA /* DateUtils.swift */; };
+		61B24798B792925AB2F1FD18 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A4AF0B7A6C180FA899D26 /* MenuView.swift */; };
+		664CE555FDFE29D15BCE7A9B /* BicoBobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6CBB3DCE01324E8E65C24 /* BicoBobApp.swift */; };
+		6B8ACEDFB029E9AD5DBB4F7E /* LaunchAtLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2342FDA88F1A5C44AE7ABCA5 /* LaunchAtLoginService.swift */; };
+		7AEEA7BF0AC1B1C888CF07E4 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C571A1F1FD994787DB393787 /* GeminiService.swift */; };
+		9461E7BAF4E4B75D652C3212 /* SlackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A64B79F35B1DA7446D64C2 /* SlackService.swift */; };
+		9739D8A00B8C40DBD376615E /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BED1A210F72A7238776955 /* MenuSection.swift */; };
+		CBF387C7D086B348DBAD1BA4 /* ImageViewerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C85D824C16F693D0AC729 /* ImageViewerWindow.swift */; };
+		CCB26A885F58A461DC5A5F16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE934F3825EFD5E6C56D480 /* AppDelegate.swift */; };
+		E19FB6D08C68FF0201FDA8E1 /* LunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDEAE1D00D786144A5DFAF8 /* LunchViewModel.swift */; };
+		EF80651C5A63C0881609A64E /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B299B67E06B59D83A8688C /* CacheService.swift */; };
+		F7A65CC10214BC83FD559AEF /* TransparentHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EC287ECCFD21512F2E1E7 /* TransparentHostingView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		055C85D824C16F693D0AC729 /* ImageViewerWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerWindow.swift; sourceTree = "<group>"; };
+		0F5753125739AD48C7B83A2C /* PopoverContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverContentView.swift; sourceTree = "<group>"; };
+		1FA2F63607301E0BF169FEAA /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		2342FDA88F1A5C44AE7ABCA5 /* LaunchAtLoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginService.swift; sourceTree = "<group>"; };
+		24A6CBB3DCE01324E8E65C24 /* BicoBobApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicoBobApp.swift; sourceTree = "<group>"; };
+		2DEFF2CFE6FEF8988F92886C /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		37997463F563720C11038DB5 /* BicoBob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BicoBob.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EDEAE1D00D786144A5DFAF8 /* LunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchViewModel.swift; sourceTree = "<group>"; };
+		6AEDC58B587A94A656211CDB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6EA3A6EBD013CEED57494863 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		83BED1A210F72A7238776955 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		847EE84DCE942812AAE41424 /* SettingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsService.swift; sourceTree = "<group>"; };
+		8C6A4AF0B7A6C180FA899D26 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9AE934F3825EFD5E6C56D480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF5EC287ECCFD21512F2E1E7 /* TransparentHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentHostingView.swift; sourceTree = "<group>"; };
+		B3B299B67E06B59D83A8688C /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		B563FEF331BFE74A2F330E30 /* StatusBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarPanel.swift; sourceTree = "<group>"; };
+		B5A64B79F35B1DA7446D64C2 /* SlackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackService.swift; sourceTree = "<group>"; };
+		C571A1F1FD994787DB393787 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		31C405AAA9A4F7DAC4652041 = {
+			isa = PBXGroup;
+			children = (
+				C90513D6FD166D814C73637C /* Sources */,
+				CA9A6E23BE398FF9CB78A3DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		405815BB09902740883ADF8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				055C85D824C16F693D0AC729 /* ImageViewerWindow.swift */,
+				8C6A4AF0B7A6C180FA899D26 /* MenuView.swift */,
+				0F5753125739AD48C7B83A2C /* PopoverContentView.swift */,
+				6AEDC58B587A94A656211CDB /* SettingsView.swift */,
+				E97B42F01573EEC298C2E660 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		79331515CAB50E83CB474F57 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B3B299B67E06B59D83A8688C /* CacheService.swift */,
+				C571A1F1FD994787DB393787 /* GeminiService.swift */,
+				2342FDA88F1A5C44AE7ABCA5 /* LaunchAtLoginService.swift */,
+				847EE84DCE942812AAE41424 /* SettingsService.swift */,
+				B5A64B79F35B1DA7446D64C2 /* SlackService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9EBA206286E4D1313CB54C06 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3EDEAE1D00D786144A5DFAF8 /* LunchViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C90513D6FD166D814C73637C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EEE12667E66DCE1EFE4F6536 /* App */,
+				E69E70814CEC35A27E7CA185 /* Models */,
+				79331515CAB50E83CB474F57 /* Services */,
+				9EBA206286E4D1313CB54C06 /* ViewModels */,
+				405815BB09902740883ADF8D /* Views */,
+			);
+			name = Sources;
+			path = BicoBob/Sources;
+			sourceTree = "<group>";
+		};
+		CA9A6E23BE398FF9CB78A3DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37997463F563720C11038DB5 /* BicoBob.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E69E70814CEC35A27E7CA185 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1FA2F63607301E0BF169FEAA /* DateUtils.swift */,
+				2DEFF2CFE6FEF8988F92886C /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E97B42F01573EEC298C2E660 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				6EA3A6EBD013CEED57494863 /* ButtonStyles.swift */,
+				83BED1A210F72A7238776955 /* MenuSection.swift */,
+				AF5EC287ECCFD21512F2E1E7 /* TransparentHostingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		EEE12667E66DCE1EFE4F6536 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9AE934F3825EFD5E6C56D480 /* AppDelegate.swift */,
+				24A6CBB3DCE01324E8E65C24 /* BicoBobApp.swift */,
+				B563FEF331BFE74A2F330E30 /* StatusBarPanel.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1683CED6E1053127A32334CA /* BicoBob */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 331F7CC4E702E1558331F51D /* Build configuration list for PBXNativeTarget "BicoBob" */;
+			buildPhases = (
+				775013BA2FFEBF0301F9EC0F /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BicoBob;
+			packageProductDependencies = (
+			);
+			productName = BicoBob;
+			productReference = 37997463F563720C11038DB5 /* BicoBob.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7E2E9C30DB2381A84C8B4632 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					1683CED6E1053127A32334CA = {
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 61826010716AFD3B472579E6 /* Build configuration list for PBXProject "BicoBob" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 31C405AAA9A4F7DAC4652041;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CA9A6E23BE398FF9CB78A3DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1683CED6E1053127A32334CA /* BicoBob */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		775013BA2FFEBF0301F9EC0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCB26A885F58A461DC5A5F16 /* AppDelegate.swift in Sources */,
+				664CE555FDFE29D15BCE7A9B /* BicoBobApp.swift in Sources */,
+				5D710CFF59DDA2D915EDAFD2 /* ButtonStyles.swift in Sources */,
+				EF80651C5A63C0881609A64E /* CacheService.swift in Sources */,
+				5D81FC21CA81FD490F33B301 /* DateUtils.swift in Sources */,
+				7AEEA7BF0AC1B1C888CF07E4 /* GeminiService.swift in Sources */,
+				CBF387C7D086B348DBAD1BA4 /* ImageViewerWindow.swift in Sources */,
+				6B8ACEDFB029E9AD5DBB4F7E /* LaunchAtLoginService.swift in Sources */,
+				E19FB6D08C68FF0201FDA8E1 /* LunchViewModel.swift in Sources */,
+				9739D8A00B8C40DBD376615E /* MenuSection.swift in Sources */,
+				61B24798B792925AB2F1FD18 /* MenuView.swift in Sources */,
+				0927BC5CBBAAB0B4823BABAE /* Models.swift in Sources */,
+				4740F32C86B25F426CB279F0 /* PopoverContentView.swift in Sources */,
+				3E641D947357BDC47D65A84C /* SettingsService.swift in Sources */,
+				5128EA474FE47D225719C6E9 /* SettingsView.swift in Sources */,
+				9461E7BAF4E4B75D652C3212 /* SlackService.swift in Sources */,
+				4710274A13BC0EDBCA3FCA8A /* StatusBarPanel.swift in Sources */,
+				F7A65CC10214BC83FD559AEF /* TransparentHostingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		19A437BCFA3C78BD0BEDF006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CEC6F5B52D1E4EFDE448536E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_ENTITLEMENTS = BicoBob/BicoBob.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_PREVIEWS = NO;
+				INFOPLIST_FILE = BicoBob/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biocom.bicobob;
+				PRODUCT_NAME = BicoBob;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.10;
+			};
+			name = Release;
+		};
+		EBE74404B02ECAD1DE42E636 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGN_ENTITLEMENTS = BicoBob/BicoBob.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_DEBUG_DYLIB = NO;
+				ENABLE_PREVIEWS = NO;
+				INFOPLIST_FILE = BicoBob/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biocom.bicobob;
+				PRODUCT_NAME = BicoBob;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.10;
+			};
+			name = Debug;
+		};
+		FB26E3F0486A5D90CA72FF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		331F7CC4E702E1558331F51D /* Build configuration list for PBXNativeTarget "BicoBob" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBE74404B02ECAD1DE42E636 /* Debug */,
+				CEC6F5B52D1E4EFDE448536E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		61826010716AFD3B472579E6 /* Build configuration list for PBXProject "BicoBob" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB26E3F0486A5D90CA72FF7E /* Debug */,
+				19A437BCFA3C78BD0BEDF006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7E2E9C30DB2381A84C8B4632 /* Project object */;
+}
