@@ -1,6 +1,5 @@
 import AppKit
 import SwiftUI
-import UserNotifications
 
 @MainActor
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -56,7 +55,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func setupNotificationTimer() {
         Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { [weak self] _ in
-            self?.checkAndSendNotification()
+            Task { @MainActor in
+                self?.checkAndSendNotification()
+            }
         }
     }
 
@@ -73,19 +74,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         UserDefaults.standard.set(todayKey, forKey: "last_notify_date")
 
-        let content = UNMutableNotificationContent()
-        content.title = "점심시간이에요!"
-
+        var body = "오늘의 메뉴를 확인하세요"
         if let cache = vm.cache {
             let day = DateUtils.weekdayName(offset: 0)
             if let menu = cache.menus.first(where: { $0.day == day }) {
                 let items = menu.lunch.prefix(3).joined(separator: ", ")
-                content.body = items.isEmpty ? "오늘의 메뉴를 확인하세요" : "오늘 메뉴: \(items)"
+                if !items.isEmpty { body = items }
             }
         }
 
-        let request = UNNotificationRequest(identifier: "lunch-\(todayKey)", content: content, trigger: nil)
-        UNUserNotificationCenter.current().add(request)
+        NotificationWindow.show(title: "점심시간이에요!", body: body)
     }
 
     // MARK: - Cleanup

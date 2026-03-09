@@ -4,8 +4,15 @@ enum SettingsService {
     private static let key = "app_settings"
 
     static func load() -> AppSettings {
-        // First try UserDefaults
+        // Try UserDefaults as Data
         if let data = UserDefaults.standard.data(forKey: key),
+           let settings = try? JSONDecoder().decode(AppSettings.self, from: data) {
+            return settings
+        }
+
+        // Try UserDefaults as String (e.g. written via defaults command)
+        if let str = UserDefaults.standard.string(forKey: key),
+           let data = str.data(using: .utf8),
            let settings = try? JSONDecoder().decode(AppSettings.self, from: data) {
             return settings
         }

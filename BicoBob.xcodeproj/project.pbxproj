@@ -18,6 +18,7 @@
 		664CE555FDFE29D15BCE7A9B /* BicoBobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6CBB3DCE01324E8E65C24 /* BicoBobApp.swift */; };
 		6B8ACEDFB029E9AD5DBB4F7E /* LaunchAtLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2342FDA88F1A5C44AE7ABCA5 /* LaunchAtLoginService.swift */; };
 		7AEEA7BF0AC1B1C888CF07E4 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C571A1F1FD994787DB393787 /* GeminiService.swift */; };
+		80077AFDAC8BAFE8D625B40A /* NotificationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E9FA8CE40EC6145DA4F4D /* NotificationWindow.swift */; };
 		9461E7BAF4E4B75D652C3212 /* SlackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A64B79F35B1DA7446D64C2 /* SlackService.swift */; };
 		9739D8A00B8C40DBD376615E /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BED1A210F72A7238776955 /* MenuSection.swift */; };
 		CBF387C7D086B348DBAD1BA4 /* ImageViewerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C85D824C16F693D0AC729 /* ImageViewerWindow.swift */; };
@@ -46,6 +47,7 @@
 		B3B299B67E06B59D83A8688C /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 		B563FEF331BFE74A2F330E30 /* StatusBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarPanel.swift; sourceTree = "<group>"; };
 		B5A64B79F35B1DA7446D64C2 /* SlackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackService.swift; sourceTree = "<group>"; };
+		B91E9FA8CE40EC6145DA4F4D /* NotificationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWindow.swift; sourceTree = "<group>"; };
 		C571A1F1FD994787DB393787 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 			children = (
 				055C85D824C16F693D0AC729 /* ImageViewerWindow.swift */,
 				8C6A4AF0B7A6C180FA899D26 /* MenuView.swift */,
+				B91E9FA8CE40EC6145DA4F4D /* NotificationWindow.swift */,
 				0F5753125739AD48C7B83A2C /* PopoverContentView.swift */,
 				6AEDC58B587A94A656211CDB /* SettingsView.swift */,
 				E97B42F01573EEC298C2E660 /* Components */,
@@ -210,6 +213,7 @@
 				9739D8A00B8C40DBD376615E /* MenuSection.swift in Sources */,
 				61B24798B792925AB2F1FD18 /* MenuView.swift in Sources */,
 				0927BC5CBBAAB0B4823BABAE /* Models.swift in Sources */,
+				80077AFDAC8BAFE8D625B40A /* NotificationWindow.swift in Sources */,
 				4740F32C86B25F426CB279F0 /* PopoverContentView.swift in Sources */,
 				3E641D947357BDC47D65A84C /* SettingsService.swift in Sources */,
 				5128EA474FE47D225719C6E9 /* SettingsView.swift in Sources */,
