@@ -2,6 +2,13 @@
 
 macOS 메뉴바에서 바로 확인하는 점심 메뉴 위젯
 
+## Download
+
+| 버전 | 설명 | 다운로드 |
+|------|------|----------|
+| BicoBob (네이티브) | Swift/SwiftUI | [BicoBob_1.0.0.dmg](https://github.com/dfassf/bicobob/releases/download/v1.0.0/BicoBob_1.0.0.dmg) |
+| 비코밥 (Tauri) | React/Rust (레거시) | [비코밥_1.0.0_aarch64.dmg](https://github.com/dfassf/bicobob/releases/download/v1.0.0/비코밥_1.0.0_aarch64.dmg) |
+
 ## Features
 
 - Slack 채널에서 주간 점심 메뉴 이미지 자동 수집
