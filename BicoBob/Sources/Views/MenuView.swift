@@ -63,7 +63,9 @@ struct MenuView: View {
                 menuView
                 actionButtons
             }
-            .padding(.horizontal, 14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.leading, 14)
+            .padding(.trailing, 6)
             .padding(.vertical, 8)
         }
     }
@@ -119,13 +121,6 @@ struct MenuView: View {
         if vm.status == .error {
             Button("다시 시도") {
                 Task { await vm.refresh() }
-            }
-            .buttonStyle(FullWidthButtonStyle())
-        }
-
-        if vm.cache?.imageBase64 != nil && vm.status == .done {
-            Button("메뉴 원본 이미지 보기") {
-                ImageViewerWindow.show(base64: vm.cache!.imageBase64)
             }
             .buttonStyle(FullWidthButtonStyle())
         }

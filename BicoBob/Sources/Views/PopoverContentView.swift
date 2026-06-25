@@ -6,7 +6,7 @@ struct PopoverContentView: View {
 
     var body: some View {
         Group {
-            if showSettings || vm.settings.slackToken.isEmpty {
+            if showSettings {
                 SettingsView(vm: vm, showSettings: $showSettings)
             } else {
                 MenuView(vm: vm, showSettings: $showSettings)

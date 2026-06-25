@@ -12,9 +12,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)
 
         panel = StatusBarPanel(content: PopoverContentView(vm: vm))
+        panel.applyAppearance(darkMode: vm.settings.darkMode)
         setupStatusItem()
         setupEventMonitor()
         setupNotificationTimer()
+        setupAppearanceObserver()
 
         if vm.settings.showOnStartup {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
@@ -32,8 +34,46 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "fork.knife", accessibilityDescription: "비코밥")
-            button.action = #selector(togglePanel)
+            button.action = #selector(handleStatusClick)
             button.target = self
+            button.sendAction(on: [.leftMouseUp, .rightMouseUp])  // 우클릭도 받기
+        }
+    }
+
+    @objc private func handleStatusClick() {
+        let event = NSApp.currentEvent
+        let isRightClick = event?.type == .rightMouseUp
+            || event?.modifierFlags.contains(.control) == true
+        if isRightClick {
+            showStatusMenu()
+        } else {
+            togglePanel()
+        }
+    }
+
+    private func showStatusMenu() {
+        panel.hide()
+        let menu = NSMenu()
+        let quit = NSMenuItem(title: "비코밥 종료", action: #selector(quitApp), keyEquivalent: "q")
+        quit.target = self
+        menu.addItem(quit)
+        if let button = statusItem.button {
+            menu.popUp(positioning: nil, at: NSPoint(x: 0, y: button.bounds.height + 4), in: button)
+        }
+    }
+
+    @objc private func quitApp() {
+        NSApplication.shared.terminate(nil)
+    }
+
+    private func setupAppearanceObserver() {
+        NotificationCenter.default.addObserver(
+            forName: .bicoAppearanceChanged, object: nil, queue: .main
+        ) { [weak self] _ in
+            MainActor.assumeIsolated {
+                guard let self else { return }
+                self.panel.applyAppearance(darkMode: self.vm.settings.darkMode)
+            }
         }
     }
 
@@ -83,7 +123,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
 
-        NotificationWindow.show(title: "점심시간이에요!", body: body)
+        NotificationWindow.show(title: "점심시간이에요!", body: body, darkMode: vm.settings.darkMode)
     }
 
     // MARK: - Cleanup

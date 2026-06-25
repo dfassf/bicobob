@@ -7,7 +7,7 @@ struct TrayButtonStyle: ButtonStyle {
             .foregroundStyle(.secondary)
             .padding(.horizontal, 10)
             .padding(.vertical, 4)
-            .background(configuration.isPressed ? Color.white.opacity(0.15) : Color.white.opacity(0.08))
+            .background(configuration.isPressed ? Color.primary.opacity(0.15) : Color.primary.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }
@@ -18,7 +18,7 @@ struct NavButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .foregroundStyle(isEnabled ? (configuration.isPressed ? .primary : .secondary) : .quaternary)
-            .background(configuration.isPressed ? Color.white.opacity(0.15) : Color.white.opacity(0.08))
+            .background(configuration.isPressed ? Color.primary.opacity(0.15) : Color.primary.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }
@@ -30,7 +30,7 @@ struct FullWidthButtonStyle: ButtonStyle {
             .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 6)
-            .background(configuration.isPressed ? Color.white.opacity(0.15) : Color.white.opacity(0.08))
+            .background(configuration.isPressed ? Color.primary.opacity(0.15) : Color.primary.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }
@@ -42,7 +42,7 @@ struct SaveButtonStyle: ButtonStyle {
             .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity)
             .padding(.vertical, 8)
-            .background(configuration.isPressed ? Color.white.opacity(0.15) : Color.white.opacity(0.08))
+            .background(configuration.isPressed ? Color.primary.opacity(0.15) : Color.primary.opacity(0.08))
             .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }

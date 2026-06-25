@@ -6,7 +6,7 @@ final class NotificationWindow {
     private static var window: NSWindow?
     private static var hideTask: Task<Void, Never>?
 
-    static func show(title: String, body: String, duration: TimeInterval = 5) {
+    static func show(title: String, body: String, darkMode: Bool, duration: TimeInterval = 5) {
         hide()
 
         let view = NotificationPopupView(title: title, message: body) {
@@ -31,10 +31,12 @@ final class NotificationWindow {
         w.isMovableByWindowBackground = false
         w.titlebarAppearsTransparent = true
         w.titleVisibility = .hidden
+        w.appearance = NSAppearance(named: darkMode ? .darkAqua : .aqua)  // 앱 다크모드 토글 반영
 
         let effect = NSVisualEffectView(frame: w.contentView!.bounds)
         effect.autoresizingMask = [.width, .height]
-        effect.material = .hudWindow
+        // 다크: 어두운 HUD 유지 / 라이트: 외관 따라가는 popover 재질 (hudWindow 는 모드 무관 항상 어둠)
+        effect.material = darkMode ? .hudWindow : .popover
         effect.state = .active
         effect.wantsLayer = true
         effect.layer?.cornerRadius = 12

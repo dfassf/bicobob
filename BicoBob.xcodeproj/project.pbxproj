@@ -17,9 +17,8 @@
 		61B24798B792925AB2F1FD18 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6A4AF0B7A6C180FA899D26 /* MenuView.swift */; };
 		664CE555FDFE29D15BCE7A9B /* BicoBobApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6CBB3DCE01324E8E65C24 /* BicoBobApp.swift */; };
 		6B8ACEDFB029E9AD5DBB4F7E /* LaunchAtLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2342FDA88F1A5C44AE7ABCA5 /* LaunchAtLoginService.swift */; };
-		7AEEA7BF0AC1B1C888CF07E4 /* GeminiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C571A1F1FD994787DB393787 /* GeminiService.swift */; };
 		80077AFDAC8BAFE8D625B40A /* NotificationWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91E9FA8CE40EC6145DA4F4D /* NotificationWindow.swift */; };
-		9461E7BAF4E4B75D652C3212 /* SlackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A64B79F35B1DA7446D64C2 /* SlackService.swift */; };
+		9461E7BAF4E4B75D652C3212 /* MenuAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A64B79F35B1DA7446D64C2 /* MenuAPIService.swift */; };
 		9739D8A00B8C40DBD376615E /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BED1A210F72A7238776955 /* MenuSection.swift */; };
 		CBF387C7D086B348DBAD1BA4 /* ImageViewerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055C85D824C16F693D0AC729 /* ImageViewerWindow.swift */; };
 		CCB26A885F58A461DC5A5F16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE934F3825EFD5E6C56D480 /* AppDelegate.swift */; };
@@ -46,9 +45,8 @@
 		AF5EC287ECCFD21512F2E1E7 /* TransparentHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentHostingView.swift; sourceTree = "<group>"; };
 		B3B299B67E06B59D83A8688C /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
 		B563FEF331BFE74A2F330E30 /* StatusBarPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarPanel.swift; sourceTree = "<group>"; };
-		B5A64B79F35B1DA7446D64C2 /* SlackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlackService.swift; sourceTree = "<group>"; };
+		B5A64B79F35B1DA7446D64C2 /* MenuAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAPIService.swift; sourceTree = "<group>"; };
 		B91E9FA8CE40EC6145DA4F4D /* NotificationWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationWindow.swift; sourceTree = "<group>"; };
-		C571A1F1FD994787DB393787 /* GeminiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeminiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -77,10 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				B3B299B67E06B59D83A8688C /* CacheService.swift */,
-				C571A1F1FD994787DB393787 /* GeminiService.swift */,
 				2342FDA88F1A5C44AE7ABCA5 /* LaunchAtLoginService.swift */,
 				847EE84DCE942812AAE41424 /* SettingsService.swift */,
-				B5A64B79F35B1DA7446D64C2 /* SlackService.swift */,
+				B5A64B79F35B1DA7446D64C2 /* MenuAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 				5D710CFF59DDA2D915EDAFD2 /* ButtonStyles.swift in Sources */,
 				EF80651C5A63C0881609A64E /* CacheService.swift in Sources */,
 				5D81FC21CA81FD490F33B301 /* DateUtils.swift in Sources */,
-				7AEEA7BF0AC1B1C888CF07E4 /* GeminiService.swift in Sources */,
 				CBF387C7D086B348DBAD1BA4 /* ImageViewerWindow.swift in Sources */,
 				6B8ACEDFB029E9AD5DBB4F7E /* LaunchAtLoginService.swift in Sources */,
 				E19FB6D08C68FF0201FDA8E1 /* LunchViewModel.swift in Sources */,
@@ -217,7 +213,7 @@
 				4740F32C86B25F426CB279F0 /* PopoverContentView.swift in Sources */,
 				3E641D947357BDC47D65A84C /* SettingsService.swift in Sources */,
 				5128EA474FE47D225719C6E9 /* SettingsView.swift in Sources */,
-				9461E7BAF4E4B75D652C3212 /* SlackService.swift in Sources */,
+				9461E7BAF4E4B75D652C3212 /* MenuAPIService.swift in Sources */,
 				4710274A13BC0EDBCA3FCA8A /* StatusBarPanel.swift in Sources */,
 				F7A65CC10214BC83FD559AEF /* TransparentHostingView.swift in Sources */,
 			);

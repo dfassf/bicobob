@@ -1,3 +1,4 @@
+import AppKit
 import SwiftUI
 
 struct SettingsView: View {
@@ -11,20 +12,48 @@ struct SettingsView: View {
         self._form = State(initialValue: vm.settings)
     }
 
+    // "HH:mm" 문자열 ↔ Date 변환. DatePicker(.hourAndMinute)는 항상 유효한 시각만 내므로
+    // 잘못된 입력이 원천적으로 불가능하다(검증 불필요).
+    private var notifyTimeBinding: Binding<Date> {
+        Binding(
+            get: { Self.date(fromHHmm: form.notifyTime) },
+            set: { form.notifyTime = Self.hhmm(from: $0) }
+        )
+    }
+
+    private static func date(fromHHmm hhmm: String) -> Date {
+        let parts = hhmm.split(separator: ":")
+        var comps = DateComponents()
+        comps.hour = parts.indices.contains(0) ? Int(parts[0]) ?? 12 : 12
+        comps.minute = parts.indices.contains(1) ? Int(parts[1]) ?? 35 : 35
+        return Calendar.current.date(from: comps) ?? Date()
+    }
+
+    private static func hhmm(from date: Date) -> String {
+        let c = Calendar.current.dateComponents([.hour, .minute], from: date)
+        return String(format: "%02d:%02d", c.hour ?? 0, c.minute ?? 0)
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             headerSection
             Divider().opacity(0.3)
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 12) {
-                    apiSection
-                    Divider().opacity(0.2).padding(.vertical, 4)
-                    generalSection
-                    saveButton
-                }
-                .padding(14)
+                generalSection
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(14)
             }
+
+            saveButton
+                .padding(.horizontal, 14)
+                .padding(.bottom, 6)
+
+            Button("비코밥 종료") { NSApplication.shared.terminate(nil) }
+                .buttonStyle(.plain)
+                .font(.system(size: 11))
+                .foregroundStyle(.secondary)
+                .padding(.bottom, 12)
         }
     }
 
@@ -32,8 +61,14 @@ struct SettingsView: View {
 
     private var headerSection: some View {
         HStack {
-            Button("< 뒤로") { showSettings = false }
-                .buttonStyle(TrayButtonStyle())
+            Button(action: { showSettings = false }) {
+                HStack(spacing: 3) {
+                    Image(systemName: "chevron.left")
+                        .font(.system(size: 10, weight: .semibold))
+                    Text("뒤로")
+                }
+            }
+            .buttonStyle(TrayButtonStyle())
             Spacer()
             Text("설정")
                 .font(.system(size: 13, weight: .semibold))
@@ -42,27 +77,26 @@ struct SettingsView: View {
         .padding(.vertical, 10)
     }
 
-    private var apiSection: some View {
-        Group {
-            SettingsField(label: "Slack Token", text: $form.slackToken, placeholder: "xoxp-...", isSecure: true)
-            SettingsField(label: "채널명", text: $form.channelName, placeholder: "general")
-            SettingsField(label: "Slack 사용자명", text: $form.username, placeholder: "홍길동")
-            SettingsField(label: "Gemini API Key", text: $form.geminiApiKey, placeholder: "AIza...", isSecure: true)
-        }
-    }
-
     private var generalSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             SettingsToggleRow(label: "점심 알림", isOn: $form.notifyEnabled) {
-                TextField("12:35", text: $form.notifyTime)
-                    .textFieldStyle(.roundedBorder)
-                    .frame(width: 80)
+                DatePicker("", selection: notifyTimeBinding, displayedComponents: .hourAndMinute)
+                    .labelsHidden()
+                    .frame(width: 90)
                     .disabled(!form.notifyEnabled)
                     .opacity(form.notifyEnabled ? 1 : 0.4)
             }
 
             SettingsToggleRow(label: "시작 시 패널 표시", isOn: $form.showOnStartup)
             SettingsToggleRow(label: "로그인 시 자동 실행", isOn: $form.launchAtLogin)
+            SettingsToggleRow(label: "다크 모드", isOn: Binding(
+                get: { form.darkMode },
+                set: { newValue in
+                    form.darkMode = newValue
+                    vm.settings.darkMode = newValue          // 즉시 반영용으로 vm 에도 커밋
+                    NotificationCenter.default.post(name: .bicoAppearanceChanged, object: nil)
+                }
+            ))
         }
     }
 
@@ -71,6 +105,7 @@ struct SettingsView: View {
             vm.settings = form
             vm.saveSettings()
             LaunchAtLoginService.setEnabled(form.launchAtLogin)
+            NotificationCenter.default.post(name: .bicoAppearanceChanged, object: nil)
             showSettings = false
             Task { await vm.refresh() }
         }
